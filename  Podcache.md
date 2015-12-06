@@ -5,7 +5,7 @@ Hacky, only really tested against libsyn feeds.
 
 ## Usage
 
-1. Clone into a directory on your machine.
+1. Clone into a directory on your machine with `git clone https://gist.github.com/23c43febdc8fc393822d.git podcache`
 2. Install dependencies with `pip install -r requirements.txt`
 3. Run with python podcache.py
 
