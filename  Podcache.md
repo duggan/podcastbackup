@@ -1,7 +1,7 @@
 # Podcache
 
 Back up podcasts with metadata from a feed URL. Progress indicator and resuming.
-Hacky, only really tested against libsyn feeds.
+Hacky, only really tested against FeedBurner/libsyn feeds.
 
 When you run it, you get a directory named after the podcast with a list of `mp3` files and `metadata.json` files.
 
