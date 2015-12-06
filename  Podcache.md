@@ -3,6 +3,19 @@
 Back up podcasts with metadata from a feed URL. Progress indicator and resuming.
 Hacky, only really tested against libsyn feeds.
 
+When you run it, you get a directory named after the podcast with a list of `mp3` files and `metadata.json` files.
+
+```
+tree /mnt/backups/podcast/
+/mnt/backups/podcast/
+├── bestshowever1.mp3.metadata.json
+├── bestshowever1.mp3
+├── bestshowever2.mp3.metadata.json
+├── bestshowever2.mp3
+├── bestshowever3.mp3.metadata.json
+├── bestshowever3.mp3
+```
+
 ## Usage
 
 1. Clone into a directory on your machine with `git clone https://gist.github.com/23c43febdc8fc393822d.git podcache`
