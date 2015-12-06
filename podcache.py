@@ -140,7 +140,7 @@ for podcast in podcasts:
 
     # Write some metadata alongside
     print("Writing metadata to %s" % metadata_filename)
-    with open(metadata_filename, 'wb') as f:
+    with open(metadata_filename, 'w') as f:
         json.dump(podcast, f, indent = 4)
 
     try:
@@ -174,7 +174,7 @@ for podcast in podcasts:
                 r = requests.get(podcast["href"], stream=True, headers={'Range': 'bytes=%d-%d' % (size_on_disk, expected_size)})
                 if r.status_code == 206:
                     print("Resuming...")
-                    write_properties = 'awb'
+                    write_properties = 'ab'
                     progress = size_on_disk
                 else:
                     print("Redownloading...")
