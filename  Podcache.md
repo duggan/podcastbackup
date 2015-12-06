@@ -26,7 +26,7 @@ The `metadata.json` files look like:
 }
 ```
 
-![Screenshot of Podcache downloading Hardcore History](http://i.imgur.com/pHdVEfi.png)
+![Screnshot of Podcache downloading Hardcore History](http://i.imgur.com/pHdVEfi.png)
 
 ## Usage
 
