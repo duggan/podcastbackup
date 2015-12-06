@@ -26,6 +26,8 @@ The `metadata.json` files look like:
 }
 ```
 
+[Imgur](http://i.imgur.com/pHdVEfi.png)
+
 ## Usage
 
 1. Clone into a directory on your machine with `git clone https://gist.github.com/23c43febdc8fc393822d.git podcache`
@@ -39,3 +41,4 @@ Works with Python 2 and 3.
 Drop a file named `.ignores` into the download directory of a particular podcast to skip downloading particular episodes.
 
 Useful for skipping over broken / missing episodes. An example of the syntax is in the .ignores file with this repo.
+
