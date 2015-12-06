@@ -6,7 +6,6 @@ import signal
 import json
 from threading import Event
 from collections import deque
-from pprint import pprint
 import feedparser
 import requests
 import progressbar
@@ -56,6 +55,7 @@ if opts.filter:
 
 f = feedparser.parse(opts.feed)
 
+from pprint import pprint
 podcasts = []
 for entry in f["entries"]:
     podcast = {}
@@ -105,12 +105,14 @@ if os.path.exists(ignores_file):
         # Horrible little parser
         with open(ignores_file, 'r') as f:
             for line in f:
-                raw = line.rstrip().split(":")
-                field = raw[0]
-                value = raw[1]
-                if len(raw) > 2:
-                    value = ":".join(raw[1:])
-                ignores.append({field.strip(): value.strip()})
+                # ignore comments
+                if not line.startswith("#"):
+                    raw = line.rstrip().split(":")
+                    field = raw[0]
+                    value = raw[1]
+                    if len(raw) > 2:
+                        value = ":".join(raw[1:])
+                    ignores.append({field.strip(): value.strip()})
     except:
         print('Invalid ignores file.')
         print('Should be one entry per line, title:foo bar baz')
