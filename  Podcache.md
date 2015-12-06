@@ -21,7 +21,7 @@ The `metadata.json` files look like:
 ```json
 {
     "text": "This is probably the best show yet!",
-    "href": "http://animenewsnetwork.cachefly.net/anncast/bestshowever42.mp3",
+    "href": "http://bestshowever.cachefly.net/bestshowever/bestshowever42.mp3",
     "title": "Best Show Ever 42: All The Answers"
 }
 ```
