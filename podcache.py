@@ -6,6 +6,7 @@ import signal
 import json
 from threading import Event
 from collections import deque
+from pprint import pprint
 import feedparser
 import requests
 import progressbar
@@ -55,7 +56,6 @@ if opts.filter:
 
 f = feedparser.parse(opts.feed)
 
-from pprint import pprint
 podcasts = []
 for entry in f["entries"]:
     podcast = {}
