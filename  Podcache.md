@@ -16,6 +16,16 @@ tree /mnt/backups/podcast/
 ├── bestshowever3.mp3
 ```
 
+The `metadata.json` files look like:
+
+```json
+{
+    "text": "This is probably the best show yet!",
+    "href": "http://animenewsnetwork.cachefly.net/anncast/bestshowever42.mp3",
+    "title": "Best Show Ever 42: All The Answers"
+}
+```
+
 ## Usage
 
 1. Clone into a directory on your machine with `git clone https://gist.github.com/23c43febdc8fc393822d.git podcache`
