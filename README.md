@@ -49,6 +49,11 @@ optional arguments:
                         Apply a regular expression filter on titles
 ```
 
+Example:
+
+```
+$ podcastbackup -f http://feeds.feedburner.com/se-radio
+```
 
 Works with Python 2 and 3.
 
