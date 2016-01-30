@@ -26,7 +26,7 @@ The `metadata.json` files look like:
 }
 ```
 
-![Screenshot of Podcache downloading Fast Karate for the Gentleman](http://i.imgur.com/55g4iQY.gifv)
+![Screenshot of Podcache downloading Fast Karate for the Gentleman](https://i.imgur.com/55g4iQY.gif)
 
 ## Usage
 
