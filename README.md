@@ -1,4 +1,4 @@
-# Podcache
+# podcastbackup
 
 Back up podcasts with metadata from a feed URL. Progress indicator and resuming.
 Hacky, only really tested against FeedBurner/libsyn feeds.
@@ -26,13 +26,13 @@ The `metadata.json` files look like:
 }
 ```
 
-![Screenshot of Podcache downloading Hardcore History](http://i.imgur.com/pHdVEfi.png)
+![Screenshot of Podcache downloading Fast Karate for the Gentleman](http://i.imgur.com/55g4iQY.gifv)
 
 ## Usage
 
-1. Clone into a directory on your machine with `git clone https://gist.github.com/23c43febdc8fc393822d.git podcache`
-2. Install dependencies with `pip install -r requirements.txt`
-3. Run with `python podcache.py`
+```
+$ pip install podcastbackup
+```
 
 Works with Python 2 and 3.
 
