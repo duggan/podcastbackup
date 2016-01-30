@@ -34,6 +34,22 @@ The `metadata.json` files look like:
 $ pip install podcastbackup
 ```
 
+```
+usage: podcastbackup [-h] -f FEED [-o OUTPUT] [-t TYPE] [-i FILTER]
+
+Helps you back up your podcasts.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -f FEED, --feed FEED  RSS feed url
+  -o OUTPUT, --output OUTPUT
+                        Location for downloaded items
+  -t TYPE, --type TYPE  File extension to look for in feed items
+  -i FILTER, --filter FILTER
+                        Apply a regular expression filter on titles
+```
+
+
 Works with Python 2 and 3.
 
 ## Ignores file
