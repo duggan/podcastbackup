@@ -12,11 +12,7 @@ packages = [
     'podcastbackup',
 ]
 
-long_description = open("README.md").read()
-try:
-    long_description = open("README.rst").read()
-except IOError:
-    pass
+long_description = open("docs/README.rst").read()
 
 requires = open("requirements.txt").read().split()
 
