@@ -12,15 +12,13 @@ packages = [
     'podcastbackup',
 ]
 
-long_description = open("docs/README.rst").read()
-
 requires = open("requirements.txt").read().split()
 
 setup(
     name='podcastbackup',
     version=__version__,
     description=__desc__,
-    long_description=long_description,
+    long_description_markdown_filename='README.md',
     author=__author__,
     author_email=__author_email__,
     url=__url__,
@@ -33,6 +31,7 @@ setup(
         ]
     },
     include_package_data=True,
+    setup_requires=['setuptools-markdown'],
     install_requires=requires,
     license=open('LICENSE').read(),
     zip_safe=False,
