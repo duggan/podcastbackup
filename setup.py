@@ -1,39 +1,28 @@
 #!/usr/bin/env python
 
+from setuptools import setup, find_packages
 from podcastbackup.meta import (__version__, __desc__, __author__,
                                 __author_email__, __url__)
-from glob import glob
-try:
-    from setuptools import setup
-except ImportError:
-    from distutils.core import setup
-
-packages = [
-    'podcastbackup',
-]
 
 requires = open("requirements.txt").read().split()
 
 setup(
     name='podcastbackup',
     version=__version__,
-    description=__desc__,
-    long_description_markdown_filename='README.md',
     author=__author__,
     author_email=__author_email__,
     url=__url__,
-    packages=packages,
-    package_data={'': ['LICENSE']},
-    package_dir={'podcastbackup': 'podcastbackup'},
+    long_description=open('README.md').read(),
+    long_description_content_type='text/markdown',
+    packages=find_packages(),
     entry_points={
         "console_scripts": [
             "podcastbackup = podcastbackup.pb:run",
         ]
     },
     include_package_data=True,
-    setup_requires=['setuptools-markdown'],
     install_requires=requires,
-    license=open('LICENSE').read(),
+    license="MIT License",
     zip_safe=False,
     classifiers=(
         'Development Status :: 4 - Beta',
