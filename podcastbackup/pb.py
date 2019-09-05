@@ -70,7 +70,14 @@ class PodcastBackup:
                 print("Could not figure out description, skipping")
 
             if "links" in entry:
-                links = [item for item in entry["links"] if self.type in item["href"]]
+                links = []
+                for item in entry["links"]:
+                    parts = item["href"].split("?")
+                    if len(parts) > 2:
+                        raise Exception("Problem parsing link url (too many '?')")
+                    link = parts.pop(0)
+                    if link.endswith(self.type):
+                       links.append(link)
                 if len(links):
                     podcast["href"] = links[0]["href"]
                 else:
