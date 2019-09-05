@@ -54,7 +54,7 @@ class PodcastBackup:
                 print(e)
 
     def parseFeed(self):
-
+        print("Parsing feed...")
         f = feedparser.parse(self.feed)
 
         podcasts = []
@@ -70,9 +70,16 @@ class PodcastBackup:
                 print("Could not figure out description, skipping")
 
             if "links" in entry:
-                links = [item for item in entry["links"] if item["href"].endswith(self.type)]
+                links = []
+                for item in entry["links"]:
+                    parts = item["href"].split("?")
+                    if len(parts) > 2:
+                        raise Exception("Problem parsing link url (too many '?')")
+                    link = parts.pop(0).strip()
+                    if link.endswith(self.type):
+                       links.append(link)
                 if len(links):
-                    podcast["href"] = links[0]["href"]
+                    podcast["href"] = links.pop(0)
                 else:
                     raise Exception("Could not determine audio URL:\n", entry["links"])
             else:
