@@ -70,7 +70,7 @@ class PodcastBackup:
                 print("Could not figure out description, skipping")
 
             if "links" in entry:
-                links = [item for item in entry["links"] if item["href"].endswith(self.type)]
+                links = [item for item in entry["links"] if self.type in item["href"]]
                 if len(links):
                     podcast["href"] = links[0]["href"]
                 else:
